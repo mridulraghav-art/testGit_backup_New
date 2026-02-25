@@ -37,7 +37,7 @@
 	"id":"699eee13797d9f44c3ff5c69",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira-automatuon",
-	"modifiedTime":1772023462992,
+	"modifiedTime":1772023625247,
 	"name":"test-jira-automatuon",
 	"nodes":[
 		{
@@ -463,6 +463,7 @@
 			"context":{
 				"appName":"jira",
 				"resourceVersion":6992,
+				"connectionId":"6994543efe89b808d0bd772c",
 				"resourceName":"jira_create_issue",
 				"type":"APPLICATION"
 			},
@@ -472,6 +473,28 @@
 			"groupId":"_3kkt1-1",
 			"id":"n_QdME4",
 			"index":4,
+			"inputs":{
+				"issueType":"10075",
+				"summary":"Issue 1 ",
+				"record":{
+					"textarea___customfield_10162":"Hi this is body we testing new second first "
+				},
+				"project":"10099",
+				"descriptionV3":{
+					"content":[
+						{
+							"type":"table",
+							"attrs":{
+								"isNumberColumnEnabled":false,
+								"layout":"center",
+								"displayMode":"default"
+							}
+						}
+					],
+					"type":"doc",
+					"version":1
+				}
+			},
 			"skip":false,
 			"subTitle":"Jira",
 			"title":"Create issue",
@@ -481,6 +504,7 @@
 			"context":{
 				"appName":"jira",
 				"resourceVersion":7013,
+				"connectionId":"6994543efe89b808d0bd772c",
 				"resourceName":"jira_update_issue",
 				"type":"APPLICATION"
 			},
@@ -490,6 +514,74 @@
 			"groupId":"_3kkt1-1",
 			"id":"n_A9Am0",
 			"index":5,
+			"inputs":{
+				"sampleProjectIssueType":{
+					"project":"10099",
+					"issueType":"10075"
+				},
+				"summary":"Issue 12",
+				"issueIdOrKey":"{{ n_QdME4.outputs.id }}",
+				"record":{
+					"textarea___customfield_10162":"Hi this is body we testing new second"
+				},
+				"descriptionV3":{
+					"content":[
+						{
+							"type":"paragraph",
+							"content":[
+								{
+									"type":"text",
+									"text":"Hello there second add"
+								}
+							],
+							"attrs":{
+								"isNumberColumnEnabled":false,
+								"layout":"center",
+								"displayMode":"default"
+							}
+						},
+						{
+							"type":"table",
+							"attrs":{
+								"isNumberColumnEnabled":false,
+								"layout":"center",
+								"displayMode":"default"
+							},
+							"content":{
+								"items":{
+									"content":{
+										"items":{
+											"content":{
+												"items":{
+													"content":{
+														"items":{
+															"type":"text",
+															"text":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content[0].text }}"
+														},
+														"ua:type":"mappedArray",
+														"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content }}"
+													},
+													"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].type }}"
+												},
+												"ua:type":"mappedArray",
+												"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content }}"
+											},
+											"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].type }}"
+										},
+										"ua:type":"mappedArray",
+										"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content }}"
+									},
+									"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].type }}"
+								},
+								"ua:type":"mappedArray",
+								"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content }}"
+							}
+						}
+					],
+					"type":"doc",
+					"version":1
+				}
+			},
 			"skip":false,
 			"subTitle":"Jira",
 			"title":"Update issue",
@@ -513,5 +605,5 @@
 	"tags":[
 		
 	],
-	"version":3
+	"version":4
 }

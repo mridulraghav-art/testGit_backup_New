@@ -53,7 +53,7 @@
 	"id":"6992b8ae57f57d370d503d49",
 	"lastModifiedBy":193329,
 	"lcName":"test_update",
-	"modifiedTime":1772026324542,
+	"modifiedTime":1772026389749,
 	"name":"test_update",
 	"nodes":[
 		{
@@ -321,7 +321,7 @@
 					{
 						"target":"{{ _8bPen.outputs.result.target }}",
 						"secondaryTarget":"A",
-						"secondaryOrder":"asc",
+						"secondaryOrder":"desc",
 						"filterLogic":"",
 						"filterConditions":{},
 						"action":"{{ _8bPen.outputs.result.action }}",
@@ -356,5 +356,5 @@
 	"tags":[
 		
 	],
-	"version":43
+	"version":44
 }

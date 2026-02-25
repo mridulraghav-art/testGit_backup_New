@@ -32,11 +32,11 @@
 			"fromNodeId":"n_3qiYE",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Sam5j",
+			"toNodeId":"n_aI270",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_Sam5j",
+			"fromNodeId":"n_aI270",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"_8bPen",
@@ -53,7 +53,7 @@
 	"id":"6992b8ae57f57d370d503d49",
 	"lastModifiedBy":193329,
 	"lcName":"test_update",
-	"modifiedTime":1772026389749,
+	"modifiedTime":1772026788676,
 	"name":"test_update",
 	"nodes":[
 		{
@@ -174,6 +174,10 @@
 					"root.operations.items.newColumn",
 					"root.operations.items.newHeader",
 					"root.operations.items.rowsToAdd",
+					"root.operations.items.startRow",
+					"root.operations.items.endRow",
+					"root.operations.items.styleType",
+					"root.operations.items.row",
 					"root.operations.items.order",
 					"root.operations.items.secondaryTarget",
 					"root.operations.items.secondaryOrder",
@@ -189,34 +193,37 @@
 					"root.operations.items.formatValues.items",
 					"root.operations.items.description",
 					"root.operations.items.filterConditions.items.value",
-					"root.operations.items.filterLogic",
-					"root.operations.items.startRow",
-					"root.operations.items.endRow"
+					"root.operations.items.filterLogic"
 				]
 			},
 			"context":{
 				"appName":"excel_by_unifyapps",
-				"resourceVersion":100,
-				"resourceName":"excel_by_unifyapps_add_sheet",
+				"resourceVersion":662,
+				"resourceName":"excel_by_unifyapps_generic_operations",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BHEne-1",
-			"id":"n_Sam5j",
+			"id":"n_aI270",
 			"index":4,
 			"inputs":{
-				"replaceOriginal":false,
+				"evaluateFormulas":true,
 				"fileDetails":"{{ n_gtiCT.outputs.properties.file }}",
-				"newSheetName":"nothing1",
-				"duplicateFromSheet":true,
-				"sourceSheetName":"Instruction",
-				"fileType":"xlsx"
+				"operations":[
+					{
+						"action":"sort",
+						"order":"desc",
+						"filterLogic":"and"
+					}
+				],
+				"keepExactFileName":false,
+				"outputFormat":"xlsx"
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"Excel by UnifyApps",
-			"title":"Add sheet to Excel file",
+			"title":"Perform Operations on Excel File",
 			"type":"ACTION"
 		},
 		{
@@ -266,7 +273,7 @@
 				},
 				"jsonString":"{ \"action\": \"sort\", \"formula\": \"=IFERROR(25,\\\"\\\")\", \"target\": \"B\", startRow: \"5\", \"endRow\": \"10\",\"sortOrder\": \"desc\"}"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Utility by UnifyApps",
 			"title":"Deserialise string to JSON object",
 			"type":"ACTION"
@@ -333,7 +340,7 @@
 				"keepExactFileName":false,
 				"outputFormat":"xlsx"
 			},
-			"skip":false,
+			"skip":true,
 			"subTitle":"Excel by UnifyApps",
 			"title":"Perform Operations on Excel File",
 			"type":"ACTION"
@@ -356,5 +363,5 @@
 	"tags":[
 		
 	],
-	"version":44
+	"version":45
 }

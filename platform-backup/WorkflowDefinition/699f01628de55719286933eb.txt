@@ -30,7 +30,7 @@
 	"id":"699f01628de55719286933eb",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira",
-	"modifiedTime":1772028513722,
+	"modifiedTime":1772028547822,
 	"name":"test-jira",
 	"nodes":[
 		{
@@ -467,7 +467,7 @@
 			"id":"n_6FGuY",
 			"index":4,
 			"inputs":{
-				"issueType":"10075",
+				"issueType":"10077",
 				"summary":"{{ n_fZL6k.outputs.result.summary }}",
 				"customfield_10162":{
 					"type":"doc",
@@ -477,7 +477,13 @@
 				"descriptionV3":{
 					"content":[
 						{
-							"type":"paragraph"
+							"type":"paragraph",
+							"content":[
+								{
+									"type":"text",
+									"text":"Hello there "
+								}
+							]
 						},
 						{
 							"type":"table",
@@ -544,5 +550,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }

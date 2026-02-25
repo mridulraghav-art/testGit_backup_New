@@ -23,14 +23,21 @@
 			"fromNodeId":"n_fZL6k",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_oWLkj",
+			"toNodeId":"n_QdME4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_QdME4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_A9Am0",
 			"type":"next"
 		}
 	],
 	"id":"699eee13797d9f44c3ff5c69",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira-automatuon",
-	"modifiedTime":1772023412816,
+	"modifiedTime":1772023462992,
 	"name":"test-jira-automatuon",
 	"nodes":[
 		{
@@ -455,8 +462,25 @@
 		{
 			"context":{
 				"appName":"jira",
-				"resourceVersion":7009,
-				"connectionId":"6994543efe89b808d0bd772c",
+				"resourceVersion":6992,
+				"resourceName":"jira_create_issue",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_3kkt1-1",
+			"id":"n_QdME4",
+			"index":4,
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Create issue",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":7013,
 				"resourceName":"jira_update_issue",
 				"type":"APPLICATION"
 			},
@@ -464,121 +488,8 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_3kkt1-1",
-			"id":"n_oWLkj",
-			"index":4,
-			"inputs":{
-				"sampleProjectIssueType":{
-					"project":"10099",
-					"issueType":"10075"
-				},
-				"summary":"This should have updated table",
-				"parent":"com.atlassian.jira.plugin.system.customfieldtypes:textarea",
-				"issueIdOrKey":"JIR-1",
-				"customfield_10162":{
-					"content":[
-						{
-							"type":"paragraph",
-							"content":[
-								{
-									"type":"text",
-									"text":"We have added new Text and updated table "
-								}
-							]
-						},
-						{
-							"type":"table",
-							"attrs":{
-								"isNumberColumnEnabled":false,
-								"layout":"center",
-								"displayMode":"default"
-							},
-							"content":{
-								"items":{
-									"content":{
-										"items":{
-											"content":{
-												"items":{
-													"content":{
-														"items":{
-															"type":"text",
-															"text":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content[0].text }}"
-														},
-														"ua:type":"mappedArray",
-														"source":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content }}"
-													},
-													"type":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].type }}"
-												},
-												"ua:type":"mappedArray",
-												"source":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].content }}"
-											},
-											"type":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].type }}"
-										},
-										"ua:type":"mappedArray",
-										"source":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content }}"
-									},
-									"type":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].type }}"
-								},
-								"ua:type":"mappedArray",
-								"source":"{{ _UAUea.outputs.result.customfield_10162.content[0].content }}"
-							}
-						}
-					],
-					"type":"doc",
-					"version":1
-				},
-				"descriptionV3":{
-					"content":[
-						{
-							"type":"paragraph",
-							"content":[
-								{
-									"type":"text",
-									"text":"This should have been Updated with old table "
-								}
-							]
-						},
-						{
-							"type":"table",
-							"attrs":{
-								"isNumberColumnEnabled":false,
-								"layout":"center",
-								"displayMode":"default"
-							},
-							"content":{
-								"items":{
-									"content":{
-										"items":{
-											"content":{
-												"items":{
-													"content":{
-														"items":{
-															"type":"text",
-															"text":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content[0].text }}"
-														},
-														"ua:type":"mappedArray",
-														"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content }}"
-													},
-													"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].type }}"
-												},
-												"ua:type":"mappedArray",
-												"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content }}"
-											},
-											"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].type }}"
-										},
-										"ua:type":"mappedArray",
-										"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content }}"
-									},
-									"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].type }}"
-								},
-								"ua:type":"mappedArray",
-								"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content }}"
-							}
-						}
-					],
-					"type":"doc",
-					"version":1
-				}
-			},
+			"id":"n_A9Am0",
+			"index":5,
 			"skip":false,
 			"subTitle":"Jira",
 			"title":"Update issue",
@@ -602,5 +513,5 @@
 	"tags":[
 		
 	],
-	"version":2
+	"version":3
 }

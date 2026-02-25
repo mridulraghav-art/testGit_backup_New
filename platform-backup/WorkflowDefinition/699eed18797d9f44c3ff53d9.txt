@@ -23,7 +23,7 @@
 	"id":"699eed18797d9f44c3ff53d9",
 	"lastModifiedBy":195389,
 	"lcName":"testing_u_converttopdf",
-	"modifiedTime":1772023324158,
+	"modifiedTime":1772023340267,
 	"name":"Testing_u_ConverttoPDF",
 	"nodes":[
 		{
@@ -142,7 +142,10 @@
 			"groupId":"_jajiD-1",
 			"id":"n_fbAmT",
 			"index":3,
-			"inputs":{},
+			"inputs":{
+				"fileDetails":"{{ n_YD6NN.outputs.fileDetails }}",
+				"fileType":"AUTO_DETECT"
+			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
 			"title":"Convert to PDF",
@@ -166,5 +169,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }

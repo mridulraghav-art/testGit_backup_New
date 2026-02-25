@@ -1,0 +1,56 @@
+{
+	"createdTime":1709741268822,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e894a0c3d95d4ebf5f6d3c",
+	"lastModifiedBy":5,
+	"lcName":"untitled",
+	"modifiedTime":1709741268822,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":2,
+				"connectionId":"65e873838a30de057bfc36a1",
+				"resourceName":"salesforce_on_new_record"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"U1bmj-1",
+			"id":"U1bmj",
+			"index":0,
+			"inputs":{
+				"objectSourceResourceName":"salesforce_fetch_object",
+				"objectId":"Account"
+			},
+			"skip":false,
+			"title":"New record",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":5,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}

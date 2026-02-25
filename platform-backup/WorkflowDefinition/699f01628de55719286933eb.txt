@@ -1,51 +1,533 @@
 {
 	"appsUsed":[
-		
+		"jira"
 	],
 	"createdTime":1772028258374,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_sfUS4",
+			"fromNodeId":"n_OEGP9",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_eNk7c",
+			"toNodeId":"n_fZL6k",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_fZL6k",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_UAUea",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_UAUea",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_6FGuY",
 			"type":"next"
 		}
 	],
 	"id":"699f01628de55719286933eb",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira",
-	"modifiedTime":1772028258374,
+	"modifiedTime":1772028399608,
 	"name":"test-jira",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":867,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_sfUS4-1",
-			"id":"_sfUS4",
-			"index":0,
+			"id":"n_OEGP9",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_sfUS4-1",
-			"id":"_eNk7c",
-			"index":0,
+			"id":"n_fZL6k",
+			"index":2,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"project":{
+							"type":"string",
+							"title":"project"
+						},
+						"issueType":{
+							"type":"string",
+							"title":"issueType"
+						},
+						"summary":{
+							"type":"string",
+							"title":"summary"
+						},
+						"customfield_10162":{
+							"type":"object",
+							"properties":{
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"type":{
+									"type":"string",
+									"title":"type"
+								},
+								"content":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"type":{
+												"type":"string",
+												"title":"type"
+											},
+											"attrs":{
+												"type":"object",
+												"properties":{
+													"isNumberColumnEnabled":{
+														"type":"boolean",
+														"title":"isNumberColumnEnabled"
+													},
+													"layout":{
+														"type":"string",
+														"title":"layout"
+													}
+												},
+												"title":"attrs",
+												"additionalProperties":false
+											},
+											"content":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"type":{
+															"type":"string",
+															"title":"type"
+														},
+														"content":{
+															"type":"array",
+															"items":{
+																"type":"object",
+																"properties":{
+																	"type":{
+																		"type":"string",
+																		"title":"type"
+																	},
+																	"content":{
+																		"type":"array",
+																		"items":{
+																			"type":"object",
+																			"properties":{
+																				"type":{
+																					"type":"string",
+																					"title":"type"
+																				},
+																				"content":{
+																					"type":"array",
+																					"items":{
+																						"type":"object",
+																						"properties":{
+																							"type":{
+																								"type":"string",
+																								"title":"type"
+																							},
+																							"text":{
+																								"type":"string",
+																								"title":"text"
+																							}
+																						},
+																						"additionalProperties":false
+																					},
+																					"title":"content"
+																				}
+																			},
+																			"additionalProperties":false
+																		},
+																		"title":"content"
+																	}
+																},
+																"additionalProperties":false
+															},
+															"title":"content"
+														}
+													},
+													"additionalProperties":false
+												},
+												"title":"content"
+											}
+										},
+										"additionalProperties":false
+									},
+									"title":"content"
+								}
+							},
+							"title":"customfield_10162",
+							"additionalProperties":false
+						},
+						"descriptionV3":{
+							"type":"object",
+							"properties":{
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"type":{
+									"type":"string",
+									"title":"type"
+								},
+								"content":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"type":{
+												"type":"string",
+												"title":"type"
+											},
+											"content":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"type":{
+															"type":"string",
+															"title":"type"
+														},
+														"text":{
+															"type":"string",
+															"title":"text"
+														}
+													},
+													"additionalProperties":false
+												},
+												"title":"content"
+											}
+										},
+										"additionalProperties":false
+									},
+									"title":"content"
+								}
+							},
+							"title":"descriptionV3",
+							"additionalProperties":false
+						}
+					}
+				},
+				"code":"def tableContent = []\n\n// Header Row\ndef headerRow = [\n    type: \"tableRow\",\n    content: (1..10).collect { col ->\n        [\n            type: \"tableHeader\",\n            content: [[\n                type: \"paragraph\",\n                content: [[\n                    type: \"text\",\n                    text: (\"Col \" + col).toString()\n                ]]\n            ]]\n        ]\n    }\n]\n\ntableContent.add(headerRow)\n\n// 4 Data Rows\n(1..4).each { row ->\n    def rowData = [\n        type: \"tableRow\",\n        content: (1..10).collect { col ->\n            [\n                type: \"tableCell\",\n                content: [[\n                    type: \"paragraph\",\n                    content: [[\n                        type: \"text\",\n                        text: (\"R\" + row + \"C\" + col).toString()\n                    ]]\n                ]]\n            ]\n        }\n    ]\n    tableContent.add(rowData)\n}\n\ndef payload = [\n    project: \"10099\",\n    issueType: \"10075\",\n    summary: \"Hi this is Table test for email body\",\n\n    customfield_10162: [\n        version: 1,\n        type: \"doc\",\n        content: [[\n            type: \"table\",\n            attrs: [\n                isNumberColumnEnabled: false,\n                layout: \"center\"\n            ],\n            content: tableContent\n        ]]\n    ],\n\n    descriptionV3: [\n        version: 1,\n        type: \"doc\",\n        content: [[\n            type: \"paragraph\",\n            content: [[\n                type: \"text\",\n                text: \"Hi this is simple test for description\"\n            ]]\n        ]]\n    ]\n]\n\nreturn payload",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sfUS4-1",
+			"id":"_UAUea",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"project":{
+							"type":"string",
+							"title":"project"
+						},
+						"issueType":{
+							"type":"string",
+							"title":"issueType"
+						},
+						"summary":{
+							"type":"string",
+							"title":"summary"
+						},
+						"customfield_10162":{
+							"type":"object",
+							"properties":{
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"type":{
+									"type":"string",
+									"title":"type"
+								},
+								"content":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"type":{
+												"type":"string",
+												"title":"type"
+											},
+											"attrs":{
+												"type":"object",
+												"properties":{
+													"isNumberColumnEnabled":{
+														"type":"boolean",
+														"title":"isNumberColumnEnabled"
+													},
+													"layout":{
+														"type":"string",
+														"title":"layout"
+													}
+												},
+												"title":"attrs",
+												"additionalProperties":false
+											},
+											"content":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"type":{
+															"type":"string",
+															"title":"type"
+														},
+														"content":{
+															"type":"array",
+															"items":{
+																"type":"object",
+																"properties":{
+																	"type":{
+																		"type":"string",
+																		"title":"type"
+																	},
+																	"content":{
+																		"type":"array",
+																		"items":{
+																			"type":"object",
+																			"properties":{
+																				"type":{
+																					"type":"string",
+																					"title":"type"
+																				},
+																				"content":{
+																					"type":"array",
+																					"items":{
+																						"type":"object",
+																						"properties":{
+																							"type":{
+																								"type":"string",
+																								"title":"type"
+																							},
+																							"text":{
+																								"type":"string",
+																								"title":"text"
+																							}
+																						},
+																						"additionalProperties":false
+																					},
+																					"title":"content"
+																				}
+																			},
+																			"additionalProperties":false
+																		},
+																		"title":"content"
+																	}
+																},
+																"additionalProperties":false
+															},
+															"title":"content"
+														}
+													},
+													"additionalProperties":false
+												},
+												"title":"content"
+											}
+										},
+										"additionalProperties":false
+									},
+									"title":"content"
+								}
+							},
+							"title":"customfield_10162",
+							"additionalProperties":false
+						},
+						"descriptionV3":{
+							"type":"object",
+							"properties":{
+								"version":{
+									"type":"integer",
+									"title":"version"
+								},
+								"type":{
+									"type":"string",
+									"title":"type"
+								},
+								"content":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"type":{
+												"type":"string",
+												"title":"type"
+											},
+											"content":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"type":{
+															"type":"string",
+															"title":"type"
+														},
+														"text":{
+															"type":"string",
+															"title":"text"
+														}
+													},
+													"additionalProperties":false
+												},
+												"title":"content"
+											}
+										},
+										"additionalProperties":false
+									},
+									"title":"content"
+								}
+							},
+							"title":"descriptionV3",
+							"additionalProperties":false
+						}
+					}
+				},
+				"code":"def tableContent = []\n\n// Header Row (4 Columns)\ndef headerRow = [\n    type: \"tableRow\",\n    content: (1..4).collect { col ->\n        [\n            type: \"tableHeader\",\n            content: [[\n                type: \"paragraph\",\n                content: [[\n                    type: \"text\",\n                    text: (\"Col \" + col).toString()\n                ]]\n            ]]\n        ]\n    }\n]\n\ntableContent.add(headerRow)\n\n// 10 Data Rows\n(1..10).each { row ->\n    def rowData = [\n        type: \"tableRow\",\n        content: (1..4).collect { col ->\n            [\n                type: \"tableCell\",\n                content: [[\n                    type: \"paragraph\",\n                    content: [[\n                        type: \"text\",\n                        text: (\"R\" + row + \"C\" + col).toString()\n                    ]]\n                ]]\n            ]\n        }\n    ]\n    tableContent.add(rowData)\n}\n\ndef payload = [\n    project: \"10099\",\n    issueType: \"10075\",\n    summary: \"Hi this is Table test for email body\",\n\n    customfield_10162: [\n        version: 1,\n        type: \"doc\",\n        content: [[\n            type: \"table\",\n            attrs: [\n                isNumberColumnEnabled: false,\n                layout: \"center\"\n            ],\n            content: tableContent\n        ]]\n    ],\n\n    descriptionV3: [\n        version: 1,\n        type: \"doc\",\n        content: [[\n            type: \"paragraph\",\n            content: [[\n                type: \"text\",\n                text: \"Hi this is simple test for description\"\n            ]]\n        ]]\n    ]\n]\n\nreturn payload",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"jira",
+				"resourceVersion":6992,
+				"connectionId":"6994543efe89b808d0bd772c",
+				"resourceName":"jira_create_issue",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sfUS4-1",
+			"id":"n_6FGuY",
+			"index":4,
+			"inputs":{
+				"issueType":"10075",
+				"summary":"{{ n_fZL6k.outputs.result.summary }}",
+				"customfield_10162":{
+					"type":"doc",
+					"version":1
+				},
+				"project":"10099",
+				"descriptionV3":{
+					"content":[
+						{
+							"type":"table",
+							"attrs":{
+								"isNumberColumnEnabled":false,
+								"layout":"center",
+								"displayMode":"default"
+							},
+							"content":{
+								"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].type }}",
+									"content":{
+										"items":{
+											"content":{
+												"ua:type":"mappedArray",
+												"items":{
+													"content":{
+														"ua:type":"mappedArray",
+														"items":{
+															"type":"text",
+															"text":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content[0].text }}"
+														},
+														"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content }}"
+													},
+													"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].type }}"
+												},
+												"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content }}"
+											},
+											"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].type }}"
+										},
+										"ua:type":"mappedArray",
+										"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content }}"
+									}
+								}
+							}
+						}
+					],
+					"type":"doc",
+					"version":1
+				}
+			},
+			"skip":false,
+			"subTitle":"Jira",
+			"title":"Create issue",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":161875,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -59,5 +541,5 @@
 	"tags":[
 		
 	],
-	"version":0
+	"version":1
 }

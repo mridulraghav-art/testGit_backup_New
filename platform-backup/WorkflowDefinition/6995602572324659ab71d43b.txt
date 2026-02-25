@@ -46,7 +46,7 @@
 	"id":"6995602572324659ab71d43b",
 	"lastModifiedBy":46209,
 	"lcName":"test",
-	"modifiedTime":1772023263146,
+	"modifiedTime":1772027038659,
 	"name":"test",
 	"nodes":[
 		{
@@ -82,7 +82,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_D06NQ-1",
 			"id":"n_RP8oj",
@@ -96,7 +96,7 @@
 					"userQuery":"hellosadpepe3"
 				}
 			},
-			"skip":true,
+			"skip":false,
 			"subTitle":"AI Agents by UnifyApps",
 			"title":"Invoke Agent",
 			"type":"CALL_INTERFACE_WORKFLOW"
@@ -220,5 +220,5 @@
 	"tags":[
 		
 	],
-	"version":17
+	"version":18
 }

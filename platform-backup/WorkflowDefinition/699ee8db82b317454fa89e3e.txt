@@ -1,0 +1,160 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1772021979090,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"n_7bQY4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JxFmz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JxFmz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_gDIFx",
+			"type":"next"
+		}
+	],
+	"id":"699ee8db82b317454fa89e3e",
+	"lastModifiedBy":195833,
+	"lcName":"delete collection",
+	"modifiedTime":1772026285612,
+	"name":"Delete Collection",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3092,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_1Hfcz-1",
+			"id":"n_7bQY4",
+			"index":1,
+			"inputs":{
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"resourceType":{
+							"type":"string",
+							"title":"Resource Type"
+						},
+						"collectionName":{
+							"type":"string",
+							"title":"Collection Name"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":1572,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_1Hfcz-1",
+			"id":"n_JxFmz",
+			"index":2,
+			"inputs":{
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"httpMethod":"POST",
+				"body":{
+					"resourceType":"{{ n_7bQY4.outputs.resourceType }}",
+					"collectionName":"{{ n_7bQY4.outputs.collectionName }}"
+				},
+				"connectionType":"DIRECT",
+				"sslVerify":false,
+				"path":"/internal/mongo-internal/permanent-delete/1",
+				"baseUrl":"http://internal-global-svc:80",
+				"httpVersion":"HTTP_2",
+				"bodySchema":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"resourceType":{
+							"type":"string",
+							"title":"Resource Type"
+						},
+						"collectionName":{
+							"type":"string",
+							"title":"Collection Name"
+						}
+					}
+				},
+				"responseContentType":"application/json",
+				"followRedirects":"NORMAL",
+				"authType":"CUSTOM",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"certificateType":"CERT_STRING"
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":3130,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_1Hfcz-1",
+			"id":"n_gDIFx",
+			"index":3,
+			"inputs":{
+				"result":"{{ n_JxFmz.outputs.status }}"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":195833,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}

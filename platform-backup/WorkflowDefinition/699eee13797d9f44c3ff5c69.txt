@@ -37,7 +37,7 @@
 	"id":"699eee13797d9f44c3ff5c69",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira-automatuon",
-	"modifiedTime":1772023625247,
+	"modifiedTime":1772023674830,
 	"name":"test-jira-automatuon",
 	"nodes":[
 		{
@@ -488,6 +488,35 @@
 								"isNumberColumnEnabled":false,
 								"layout":"center",
 								"displayMode":"default"
+							},
+							"content":{
+								"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].type }}",
+									"content":{
+										"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content }}",
+										"ua:type":"mappedArray",
+										"items":{
+											"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].type }}",
+											"content":{
+												"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content }}",
+												"ua:type":"mappedArray",
+												"items":{
+													"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].type }}",
+													"content":{
+														"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content }}",
+														"ua:type":"mappedArray",
+														"items":{
+															"type":"text",
+															"text":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content[0].text }}"
+														}
+													}
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 					],
@@ -605,5 +634,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }

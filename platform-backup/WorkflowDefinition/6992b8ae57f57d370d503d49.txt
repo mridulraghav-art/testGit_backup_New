@@ -53,7 +53,7 @@
 	"id":"6992b8ae57f57d370d503d49",
 	"lastModifiedBy":193329,
 	"lcName":"test_update",
-	"modifiedTime":1772026203672,
+	"modifiedTime":1772026324542,
 	"name":"test_update",
 	"nodes":[
 		{
@@ -264,7 +264,7 @@
 						}
 					}
 				},
-				"jsonString":"{ \"action\": \"sort\", \"formula\": \"=IFERROR(25,\\\"\\\")\", \"target\": \"B\", startRow: \"5\", \"endRow\": \"10\",\"sortOrder\": \"asc\"}"
+				"jsonString":"{ \"action\": \"sort\", \"formula\": \"=IFERROR(25,\\\"\\\")\", \"target\": \"B\", startRow: \"5\", \"endRow\": \"10\",\"sortOrder\": \"desc\"}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -297,7 +297,9 @@
 					"root.operations.items.filterConditions.items.value",
 					"root.operations.items.filterLogic",
 					"root.operations.items.startRow",
-					"root.operations.items.endRow"
+					"root.operations.items.endRow",
+					"root.operations.items.styleType",
+					"root.operations.items.row"
 				]
 			},
 			"context":{
@@ -307,7 +309,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BHEne-1",
 			"id":"_Bpo6Z",
@@ -318,6 +320,8 @@
 				"operations":[
 					{
 						"target":"{{ _8bPen.outputs.result.target }}",
+						"secondaryTarget":"A",
+						"secondaryOrder":"asc",
 						"filterLogic":"",
 						"filterConditions":{},
 						"action":"{{ _8bPen.outputs.result.action }}",
@@ -352,5 +356,5 @@
 	"tags":[
 		
 	],
-	"version":42
+	"version":43
 }

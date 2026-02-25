@@ -37,7 +37,7 @@
 	"id":"699eee13797d9f44c3ff5c69",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira-automatuon",
-	"modifiedTime":1772023732051,
+	"modifiedTime":1772023744827,
 	"name":"test-jira-automatuon",
 	"nodes":[
 		{
@@ -634,5 +634,5 @@
 	"tags":[
 		
 	],
-	"version":7
+	"version":8
 }

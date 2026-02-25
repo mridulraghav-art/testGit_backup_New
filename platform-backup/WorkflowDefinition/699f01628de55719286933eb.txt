@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1772028258374,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_sfUS4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_eNk7c",
+			"type":"next"
+		}
+	],
+	"id":"699f01628de55719286933eb",
+	"lastModifiedBy":161875,
+	"lcName":"test-jira",
+	"modifiedTime":1772028258374,
+	"name":"test-jira",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sfUS4-1",
+			"id":"_sfUS4",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sfUS4-1",
+			"id":"_eNk7c",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161875,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}

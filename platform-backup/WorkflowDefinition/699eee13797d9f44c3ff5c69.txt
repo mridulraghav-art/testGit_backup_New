@@ -37,7 +37,7 @@
 	"id":"699eee13797d9f44c3ff5c69",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira-automatuon",
-	"modifiedTime":1772023715643,
+	"modifiedTime":1772023732051,
 	"name":"test-jira-automatuon",
 	"nodes":[
 		{
@@ -550,6 +550,9 @@
 				},
 				"summary":"Issue 12",
 				"issueIdOrKey":"{{ n_QdME4.outputs.id }}",
+				"record":{
+					"textarea___customfield_10162":"Hello there second"
+				},
 				"descriptionV3":{
 					"content":[
 						{
@@ -631,5 +634,5 @@
 	"tags":[
 		
 	],
-	"version":6
+	"version":7
 }

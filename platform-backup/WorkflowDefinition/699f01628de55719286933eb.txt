@@ -30,7 +30,7 @@
 	"id":"699f01628de55719286933eb",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira",
-	"modifiedTime":1772028399608,
+	"modifiedTime":1772028513722,
 	"name":"test-jira",
 	"nodes":[
 		{
@@ -477,6 +477,9 @@
 				"descriptionV3":{
 					"content":[
 						{
+							"type":"paragraph"
+						},
+						{
 							"type":"table",
 							"attrs":{
 								"isNumberColumnEnabled":false,
@@ -541,5 +544,5 @@
 	"tags":[
 		
 	],
-	"version":1
+	"version":2
 }

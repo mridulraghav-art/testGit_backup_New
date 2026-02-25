@@ -37,7 +37,7 @@
 	"id":"699eee13797d9f44c3ff5c69",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira-automatuon",
-	"modifiedTime":1772023674830,
+	"modifiedTime":1772023715643,
 	"name":"test-jira-automatuon",
 	"nodes":[
 		{
@@ -550,9 +550,6 @@
 				},
 				"summary":"Issue 12",
 				"issueIdOrKey":"{{ n_QdME4.outputs.id }}",
-				"record":{
-					"textarea___customfield_10162":"Hi this is body we testing new second"
-				},
 				"descriptionV3":{
 					"content":[
 						{
@@ -634,5 +631,5 @@
 	"tags":[
 		
 	],
-	"version":5
+	"version":6
 }

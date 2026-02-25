@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1772023064485,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_jajiD",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_VrXoC",
+			"type":"next"
+		}
+	],
+	"id":"699eed18797d9f44c3ff53d9",
+	"lastModifiedBy":195389,
+	"lcName":"testing_u_converttopdf",
+	"modifiedTime":1772023064485,
+	"name":"Testing_u_ConverttoPDF",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_jajiD-1",
+			"id":"_jajiD",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_jajiD-1",
+			"id":"_VrXoC",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":195389,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}

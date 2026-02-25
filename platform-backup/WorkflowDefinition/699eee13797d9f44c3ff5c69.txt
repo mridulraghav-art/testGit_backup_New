@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1772023315425,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_3kkt1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_oYr6L",
+			"type":"next"
+		}
+	],
+	"id":"699eee13797d9f44c3ff5c69",
+	"lastModifiedBy":161875,
+	"lcName":"test-jira-automatuon",
+	"modifiedTime":1772023315425,
+	"name":"test-jira-automatuon",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3kkt1-1",
+			"id":"_3kkt1",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3kkt1-1",
+			"id":"_oYr6L",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":161875,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}

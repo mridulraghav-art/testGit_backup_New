@@ -37,7 +37,7 @@
 	"id":"699eee13797d9f44c3ff5c69",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira-automatuon",
-	"modifiedTime":1772023946346,
+	"modifiedTime":1772024004451,
 	"name":"test-jira-automatuon",
 	"nodes":[
 		{
@@ -47,7 +47,7 @@
 				"resourceName":"webhooks_default"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3kkt1-1",
 			"id":"n_Evw8R",
@@ -78,7 +78,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3kkt1-1",
 			"id":"_UAUea",
@@ -275,7 +275,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3kkt1-1",
 			"id":"n_fZL6k",
@@ -468,7 +468,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_3kkt1-1",
 			"id":"n_QdME4",
@@ -556,20 +556,6 @@
 				"descriptionV3":{
 					"content":[
 						{
-							"type":"paragraph",
-							"content":[
-								{
-									"type":"text",
-									"text":"Hello there second add"
-								}
-							],
-							"attrs":{
-								"isNumberColumnEnabled":false,
-								"layout":"center",
-								"displayMode":"default"
-							}
-						},
-						{
 							"type":"table",
 							"attrs":{
 								"isNumberColumnEnabled":false,
@@ -634,5 +620,5 @@
 	"tags":[
 		
 	],
-	"version":9
+	"version":10
 }

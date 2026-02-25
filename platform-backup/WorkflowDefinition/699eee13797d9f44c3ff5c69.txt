@@ -37,7 +37,7 @@
 	"id":"699eee13797d9f44c3ff5c69",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira-automatuon",
-	"modifiedTime":1772023744827,
+	"modifiedTime":1772023946346,
 	"name":"test-jira-automatuon",
 	"nodes":[
 		{
@@ -577,33 +577,33 @@
 								"displayMode":"default"
 							},
 							"content":{
+								"source":"{{ _UAUea.outputs.result.customfield_10162.content[0].content }}",
+								"ua:type":"mappedArray",
 								"items":{
+									"type":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].type }}",
 									"content":{
+										"source":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content }}",
+										"ua:type":"mappedArray",
 										"items":{
+											"type":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].type }}",
 											"content":{
+												"source":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].content }}",
+												"ua:type":"mappedArray",
 												"items":{
+													"type":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].type }}",
 													"content":{
+														"source":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content }}",
+														"ua:type":"mappedArray",
 														"items":{
 															"type":"text",
-															"text":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content[0].text }}"
-														},
-														"ua:type":"mappedArray",
-														"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content }}"
-													},
-													"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].type }}"
-												},
-												"ua:type":"mappedArray",
-												"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].content }}"
-											},
-											"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content[0].type }}"
-										},
-										"ua:type":"mappedArray",
-										"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].content }}"
-									},
-									"type":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content[0].type }}"
-								},
-								"ua:type":"mappedArray",
-								"source":"{{ n_fZL6k.outputs.result.customfield_10162.content[0].content }}"
+															"text":"{{ _UAUea.outputs.result.customfield_10162.content[0].content[0].content[0].content[0].content[0].text }}"
+														}
+													}
+												}
+											}
+										}
+									}
+								}
 							}
 						}
 					],
@@ -634,5 +634,5 @@
 	"tags":[
 		
 	],
-	"version":8
+	"version":9
 }

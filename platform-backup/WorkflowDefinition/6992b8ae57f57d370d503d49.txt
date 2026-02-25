@@ -53,7 +53,7 @@
 	"id":"6992b8ae57f57d370d503d49",
 	"lastModifiedBy":193329,
 	"lcName":"test_update",
-	"modifiedTime":1772026145998,
+	"modifiedTime":1772026203672,
 	"name":"test_update",
 	"nodes":[
 		{
@@ -227,7 +227,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_BHEne-1",
 			"id":"_8bPen",
@@ -264,7 +264,7 @@
 						}
 					}
 				},
-				"jsonString":"{ \"action\": \"sort\", \"formula\": \"=IFERROR(25,\\\"\\\")\", \"target\": \"B\", startRow: \"5\", \"endRow\": \"10\",\"sortOrder\": \"desc\"}"
+				"jsonString":"{ \"action\": \"sort\", \"formula\": \"=IFERROR(25,\\\"\\\")\", \"target\": \"B\", startRow: \"5\", \"endRow\": \"10\",\"sortOrder\": \"asc\"}"
 			},
 			"skip":false,
 			"subTitle":"Utility by UnifyApps",
@@ -307,7 +307,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BHEne-1",
 			"id":"_Bpo6Z",
@@ -352,5 +352,5 @@
 	"tags":[
 		
 	],
-	"version":41
+	"version":42
 }

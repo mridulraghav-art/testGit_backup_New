@@ -53,7 +53,7 @@
 	"id":"6992b8ae57f57d370d503d49",
 	"lastModifiedBy":193329,
 	"lcName":"test_update",
-	"modifiedTime":1772026861722,
+	"modifiedTime":1772026985688,
 	"name":"test_update",
 	"nodes":[
 		{
@@ -216,6 +216,8 @@
 						"action":"sort",
 						"target":"F",
 						"order":"desc",
+						"secondaryTarget":"H",
+						"secondaryOrder":"desc",
 						"filterLogic":"and"
 					}
 				],
@@ -235,7 +237,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BHEne-1",
 			"id":"_8bPen",
@@ -317,7 +319,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_BHEne-1",
 			"id":"_Bpo6Z",
@@ -364,5 +366,5 @@
 	"tags":[
 		
 	],
-	"version":46
+	"version":47
 }

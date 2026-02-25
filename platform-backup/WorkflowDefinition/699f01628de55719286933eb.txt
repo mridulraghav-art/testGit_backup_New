@@ -30,7 +30,7 @@
 	"id":"699f01628de55719286933eb",
 	"lastModifiedBy":161875,
 	"lcName":"test-jira",
-	"modifiedTime":1772028600910,
+	"modifiedTime":1772028652385,
 	"name":"test-jira",
 	"nodes":[
 		{
@@ -467,8 +467,11 @@
 			"id":"n_6FGuY",
 			"index":4,
 			"inputs":{
-				"issueType":"10076",
+				"issueType":"10075",
 				"summary":"{{ n_fZL6k.outputs.result.summary }}",
+				"record":{
+					"textarea___customfield_10162":"I am saving my job"
+				},
 				"customfield_10162":{
 					"type":"doc",
 					"version":1
@@ -550,5 +553,5 @@
 	"tags":[
 		
 	],
-	"version":4
+	"version":5
 }
